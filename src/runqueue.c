@@ -35,8 +35,8 @@ struct task_struct *rq_dequeue(struct rq *rq)
     if (rq->in == rq->out)
         return NULL;
 
-    rev = rq->r[rq->out & rq->mask];
-    rq->out++;
+    rq->in--;
+    rev = rq->r[rq->in & rq->mask];
 
     return rev;
 }

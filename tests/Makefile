@@ -23,3 +23,5 @@ clean:
 rq:
 	$(CC) -o test test_fifo_runqueue.c $(LIB) $(CFLAG)
 
+filo:
+	$(CC) -o test test_filo_runqueue.c $(LIB) $(CFLAG)
