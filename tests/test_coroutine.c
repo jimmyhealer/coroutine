@@ -30,7 +30,7 @@ int main(void)
 {
     int crfd, tfd[10];
 
-    crfd = coroutine_create(CR_DEFAULT);
+    crfd = coroutine_create(CR_FILO);
     if (crfd < 0)
         return crfd;
 
