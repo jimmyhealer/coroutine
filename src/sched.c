@@ -133,7 +133,7 @@ void sched_init(struct cr *cr)
         cr->pick_next_task = default_pick_next_task;
         cr->put_prev_task = default_put_prev_task;
         return;
-    case CR_filo:
+    case CR_FILO:
         rq_init(&cr->rq);
         cr->schedule = filo_schedule;
         cr->pick_next_task = filo_pick_next_task;
