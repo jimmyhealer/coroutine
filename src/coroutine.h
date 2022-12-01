@@ -21,15 +21,15 @@
 /* The flags for deciding the scheduler of coroutine 
  */
 #define CR_DEFAULT 0x0001
-#define CR_FIFO 0x0002
+#define CR_FILO 0x0002
 
-#define CR_SCHED_MASK (CR_DEFAULT | CR_FIFO)
+#define CR_SCHED_MASK (CR_DEFAULT | CR_FILO)
 
 /**
  * coroutine_create - Create the coroutine
  * @flags: The bitmask for modifying the behavior of coroutine
  * 
- * The flags can be setted by CR_DEFAULT, CR_FIFO for the scheduler decision.
+ * The flags can be setted by CR_DEFAULT, CR_FILO for the scheduler decision.
  * The return value is the fd number of coroutine.
  * When the return value is < 0, its failed.
  */
